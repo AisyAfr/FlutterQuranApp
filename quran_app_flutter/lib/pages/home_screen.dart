@@ -64,7 +64,7 @@ BottomNavigationBarItem _bottomNavigationBarItem(
 DefaultTabController _body() => DefaultTabController(
     length: 3,
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
       child: NestedScrollView(
           headerSliverBuilder:
               (BuildContext context, bool innnerBoxIsScrolled) => [
@@ -101,7 +101,7 @@ Column _salam() =>
     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       Text('Assalamualaikum!!!',
           style: GoogleFonts.poppins(
-              fontSize: 12, fontWeight: FontWeight.w600, color: secondary)),
+              fontSize: 14, fontWeight: FontWeight.w600, color: secondary)),
       Text('Maisy',
           style:
               GoogleFonts.poppins(fontSize: 28, fontWeight: FontWeight.bold)),
@@ -154,7 +154,7 @@ Column _salam() =>
               Text(
                 'ayat 7',
                 style: GoogleFonts.poppins(
-                    fontSize: 12,
+                    fontSize: 14,
                     fontWeight: FontWeight.w300,
                     color: background),
               ),

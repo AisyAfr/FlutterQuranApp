@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quran_app_flutter/detail_screen.dart';
+import 'package:quran_app_flutter/pages/detail_screen.dart';
 import 'package:quran_app_flutter/model/surah_model.dart';
 import 'package:quran_app_flutter/theme.dart';
 import 'package:quran_app_flutter/viewmodel/surah_viewmodel.dart';
 
 class TabSurah extends StatelessWidget {
   const TabSurah({super.key});
-
   @override
   Widget build(BuildContext context) {
     final SurahViewModel _viewModel = SurahViewModel();
@@ -32,7 +31,7 @@ class TabSurah extends StatelessWidget {
   Widget _itemList({required BuildContext context, required Surah surah}) =>
       InkWell(
         onTap: () {
-          Navigator.pushNamed(context, DetailScreen.routeName, arguments: surah.nomor);
+          Navigator.pushNamed(context, DetailScreen.routeName, arguments: surah.nomor.toString());
         },
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16),

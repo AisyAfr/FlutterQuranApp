@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app_flutter/detail_screen.dart';
+import 'package:quran_app_flutter/pages/detail_screen.dart';
 import 'package:quran_app_flutter/pages/home_screen.dart';
 import 'package:quran_app_flutter/pages/splash_screen.dart';
 
@@ -22,7 +22,7 @@ class MainApp extends StatelessWidget {
         SplashScreen.routeName: (context) => const SplashScreen(),
         HomeScreen.routeName: (context) => const HomeScreen(),
         DetailScreen.routeName: (context) => DetailScreen(
-          id_surah: ModalRoute.of(context)?.settings.arguments as int,
+          id_surah: ModalRoute.of(context)?.settings.arguments as String,
         ),
       },
     );
